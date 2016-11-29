@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/kalipsobznuni/contact-info-mail/issues"
   },
-  "homepage": "https://github.com/kalipsobznuni/contact-info-mail#readme"
+  "homepage": "https://github.com/kalipsobznuni/contact-info-mail#readme",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "ws": "^1.1.1"
+  }
 }
