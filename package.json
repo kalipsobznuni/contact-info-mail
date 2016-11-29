@@ -23,6 +23,8 @@
     "express": "^4.14.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2",
     "ws": "^1.1.1"
   }
 }
