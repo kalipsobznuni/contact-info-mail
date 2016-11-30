@@ -5,9 +5,9 @@ import ReactDOM from "react-dom";
 
 class App extends React.Component {
   render(){
-    return
+    return (
   <h1> HELLO!!!</h1>
-
+);
 }
 }
 /*function tick() {
@@ -22,9 +22,9 @@ class App extends React.Component {
     document.getElementById('root')
   );
 }
-*/
-setInterval(tick, 1000);
 
+setInterval(tick, 1000);
+*/
 const container = document.getElementById("container");
 
 ReactDOM.render(<App/>, container);
