@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './lib/index.js',
+  entry: './lib/homepage.jsx',
   devServer:{
     inline:true,
     progress:true,
@@ -7,7 +7,7 @@ module.exports = {
     historyApiFallback: true
   },
   output: {
-    path: `${__dirname}/lib`,
+    path: `${__dirname}/public`,
     filename: 'bundle.js'
   },
   resolve: {
