@@ -1,28 +1,31 @@
+var debug = process.env.NODE_ENV !== "production";
+var webpack = require('webpack');
+var path = require('path');
+
 module.exports = {
-  entry: './homepage.js',
-  devServer:{
-    inline:true,
-    progress:true,
-    contentBase:'public',
-    historyApiFallback: true
+  context: path.join(__dirname, "src"),
+  devtool: debug ? "inline-sourcemap" : null,
+  entry: "./js/client.js",
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['react', 'es2015', 'stage-0'],
+          plugins: ['react-html-attrs', 'transform-decorators-legacy', 'transform-class-properties'],
+        }
+      }
+    ]
   },
   output: {
-    path: `${__dirname}/public`,
-    filename: 'homepage.js'
+    path: __dirname + "/src/",
+    filename: "client.min.js"
   },
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  },
-  module:{
-    loaders:[{
-      test: /\.jsx?$/,
-      loader: 'babel',
-      exclude:/node_modules/,
-      include: `${__dirname}/lib`,
-      query: {
-
-        presets: ['es2015', 'react', 'stage-3', 'stage-0']
-      }
-    }]
-  }
+  plugins: debug ? [] : [
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+  ],
 };
