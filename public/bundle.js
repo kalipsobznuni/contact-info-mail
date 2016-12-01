@@ -89,6 +89,142 @@
 
 	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById("container"));
 
+	var NameForm = function (_React$Component2) {
+	  _inherits(NameForm, _React$Component2);
+
+	  function NameForm(props) {
+	    _classCallCheck(this, NameForm);
+
+	    var _this2 = _possibleConstructorReturn(this, (NameForm.__proto__ || Object.getPrototypeOf(NameForm)).call(this, props));
+
+	    _this2.state = { value: '' };
+
+	    _this2.handleChange = _this2.handleChange.bind(_this2);
+	    return _this2;
+	  }
+
+	  _createClass(NameForm, [{
+	    key: "handleChange",
+	    value: function handleChange(event) {
+	      this.setState({ value: event.target.value });
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "form",
+	        null,
+	        _react2.default.createElement(
+	          "label",
+	          null,
+	          "Name:",
+	          _react2.default.createElement("input", { type: "text", value: this.state.value, onChange: this.handleChange })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return NameForm;
+	}(_react2.default.Component);
+
+	_reactDom2.default.render(_react2.default.createElement(NameForm, null), document.getElementById('name'));
+
+	var Email = function (_React$Component3) {
+	  _inherits(Email, _React$Component3);
+
+	  function Email(props) {
+	    _classCallCheck(this, Email);
+
+	    var _this3 = _possibleConstructorReturn(this, (Email.__proto__ || Object.getPrototypeOf(Email)).call(this, props));
+
+	    _this3.state = { value: '' };
+
+	    _this3.handleChange = _this3.handleChange.bind(_this3);
+	    _this3.handleSubmit = _this3.handleSubmit.bind(_this3);
+	    return _this3;
+	  }
+
+	  _createClass(Email, [{
+	    key: "handleChange",
+	    value: function handleChange(event) {
+	      this.setState({ value: event.target.value });
+	    }
+	  }, {
+	    key: "handleSubmit",
+	    value: function handleSubmit(event) {
+	      alert(submitted);
+	      event.preventDefault();
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "form",
+	        { onSubmit: this.handleSubmit },
+	        _react2.default.createElement(
+	          "label",
+	          null,
+	          "Email:",
+	          _react2.default.createElement("input", { type: "text", value: this.state.value, onChange: this.handleChange })
+	        ),
+	        _react2.default.createElement("input", { type: "submit", value: "Submit" })
+	      );
+	    }
+	  }]);
+
+	  return Email;
+	}(_react2.default.Component);
+
+	_reactDom2.default.render(_react2.default.createElement(Email, null), document.getElementById('email'));
+
+	var Message = function (_React$Component4) {
+	  _inherits(Message, _React$Component4);
+
+	  function Message(props) {
+	    _classCallCheck(this, Message);
+
+	    var _this4 = _possibleConstructorReturn(this, (Message.__proto__ || Object.getPrototypeOf(Message)).call(this, props));
+
+	    _this4.state = { value: '' };
+
+	    _this4.handleChange = _this4.handleChange.bind(_this4);
+	    _this4.handleSubmit = _this4.handleSubmit.bind(_this4);
+	    return _this4;
+	  }
+
+	  _createClass(Message, [{
+	    key: "handleChange",
+	    value: function handleChange(event) {
+	      this.setState({ value: event.target.value });
+	    }
+	  }, {
+	    key: "handleSubmit",
+	    value: function handleSubmit(event) {
+	      alert(submitted);
+	      event.preventDefault();
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "form",
+	        { onSubmit: this.handleSubmit },
+	        _react2.default.createElement(
+	          "label",
+	          null,
+	          "Your Message:",
+	          _react2.default.createElement("input", { type: "text", value: this.state.value, onChange: this.handleChange })
+	        ),
+	        _react2.default.createElement("input", { type: "submit", value: "Submit" })
+	      );
+	    }
+	  }]);
+
+	  return Message;
+	}(_react2.default.Component);
+
+	_reactDom2.default.render(_react2.default.createElement(Message, null), document.getElementById('message'));
+
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
