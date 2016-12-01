@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style src="../styles.js">
+  </style>
   <meta charset="utf-8"/>
 <title>CONTACT US</title>
 
@@ -25,6 +27,25 @@ flex-direction: column;
 
 <div id="container"></div>
 <script src="bundle.js"></script>
-
+<form id='form'>
+  <label >
+    Name:
+    <input type="text" name="name" />
+  </label>
+  <label >
+    Email address:
+    <input type='text' email='email'/>
+  </label>
+  <label >
+   Message:
+   <input type='text' message='message'/>
+   </label>
+  <input type="submit" value="Submit" />
+</form>
+<style>
+label {
+  display:inline;
+}
+</style>
 </body>
 </html>

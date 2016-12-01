@@ -25,6 +25,5 @@ class App extends React.Component {
 
 setInterval(tick, 1000);
 */
-const container = document.getElementById("container");
 
-ReactDOM.render(<App/>, container);
+ReactDOM.render(<App/>, document.getElementById("container"));
