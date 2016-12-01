@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     path: `${__dirname}/public`,
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
@@ -18,10 +18,10 @@ module.exports = {
       test: /\.jsx?$/,
       loader: 'babel',
       exclude:/node_modules/,
-      include: `${__dirname}/lib`,
       query: {
         // Here you can put plugins, like plugins:['transform-runtime']
-        presets: ['es2015', 'react', 'stage-3', 'stage-0']
+        plugins:['transform-class-properties'],
+        presets: ['es2015', 'react', 'stage-3']
       }
     }]
   }
